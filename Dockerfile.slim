@@ -4,7 +4,7 @@
 # COPY nginx.conf /etc/nginx/conf.d/default.conf: Copies the nginx.conf file to the /etc/nginx/conf.d directory in the container, serving as the nginx configuration file.
 # COPY dist /usr/share/nginx/html: Copies the contents of the dist directory to the /usr/share/nginx/html directory in the container, which serves as nginx's static file directory.
 # EXPOSE 3000: Declares that the container is listening on port 3000.
-# CMD ["nginx", "-g", "daemon off"]: Runs the nginx command with the parameters -g daemon off when the container starts, indicating nginx should start in the foreground.
+# CMD ["nginx", "-g", "daemon off;"]: Runs the nginx command with the parameters -g daemon off when the container starts, indicating nginx should start in the foreground.
 
 # -------------------Usage--------------------
 
@@ -19,4 +19,4 @@ COPY dist /usr/share/nginx/html
 
 EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off"]
+CMD ["nginx", "-g", "daemon off;"]
