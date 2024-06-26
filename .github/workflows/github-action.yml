@@ -7,8 +7,9 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-  DOCKER_LABEL: latest
+  ORG: night-whisper
+  REPO: pic-smaller
+  LABEL: latest
 
 jobs:
   build:
@@ -37,4 +38,4 @@ jobs:
           file: ./Dockerfile.slim
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.DOCKER_LABEL }}
+          tags: ${{ env.REGISTRY }}/${{ env.ORG }}/${{ env.REPO }}:${{ env.LABEL }}
